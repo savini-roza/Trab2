@@ -27,15 +27,15 @@
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="jButton1" linkSize="5" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnConsultar" linkSize="5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton2" linkSize="5" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnInserir" linkSize="5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="jButton3" linkSize="5" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnAlterar" linkSize="5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton4" linkSize="5" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnExcluir" linkSize="5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton5" linkSize="5" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSair" linkSize="5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="14" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
@@ -50,18 +50,18 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jComboBox1" pref="233" max="32767" attributes="0"/>
-                                  <Component id="jTextField1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="comboBoxCurso" pref="233" max="32767" attributes="0"/>
+                                  <Component id="txtSiglaTurma" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtNome" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextField3" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jFormattedTextField1" linkSize="1" min="-2" pref="101" max="-2" attributes="0"/>
+                                          <Component id="txtQuantidadeVagas" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="formattedDataInicio" linkSize="1" min="-2" pref="101" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -70,8 +70,8 @@
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jComboBox2" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jFormattedTextField2" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="comboBoxPeriodo" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="formattedDataTermino" linkSize="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -89,39 +89,39 @@
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jComboBox1" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="comboBoxCurso" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField1" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtSiglaTurma" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField2" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNome" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField3" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtQuantidadeVagas" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jComboBox2" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="comboBoxPeriodo" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jFormattedTextField1" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="formattedDataInicio" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jFormattedTextField2" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="formattedDataTermino" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="39" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton2" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton3" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton4" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton5" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnConsultar" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnInserir" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAlterar" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnExcluir" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSair" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
@@ -134,15 +134,10 @@
         <Property name="text" type="java.lang.String" value="Curso"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox1">
+    <Component class="javax.swing.JComboBox" name="comboBoxCurso">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
+          <StringArray count="0"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -154,7 +149,7 @@
         <Property name="text" type="java.lang.String" value="Sigla da turma"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="txtSiglaTurma">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
@@ -169,12 +164,12 @@
         <Property name="text" type="java.lang.String" value="Quantidade de vagas"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="txtNome">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField3">
+    <Component class="javax.swing.JTextField" name="txtQuantidadeVagas">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
@@ -184,7 +179,7 @@
         <Property name="text" type="java.lang.String" value="Per&#xed;odo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox2">
+    <Component class="javax.swing.JComboBox" name="comboBoxPeriodo">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="0"/>
@@ -200,7 +195,7 @@
         <Property name="text" type="java.lang.String" value="Data de in&#xed;cio"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField1">
+    <Component class="javax.swing.JFormattedTextField" name="formattedDataInicio">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
           <Format format="##/##/####" subtype="-1" type="5"/>
@@ -213,7 +208,7 @@
         <Property name="text" type="java.lang.String" value="Data t&#xe9;rmino"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField2">
+    <Component class="javax.swing.JFormattedTextField" name="formattedDataTermino">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
           <Format format="##/##/####" subtype="-1" type="5"/>
@@ -221,7 +216,7 @@
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="btnConsultar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/fatec/poo/view/icon/pesq.png"/>
@@ -229,7 +224,7 @@
         <Property name="text" type="java.lang.String" value="Consultar"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="btnInserir">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/fatec/poo/view/icon/add.png"/>
@@ -238,7 +233,7 @@
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="btnAlterar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/fatec/poo/view/icon/Alterar.png"/>
@@ -247,7 +242,7 @@
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="btnExcluir">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/fatec/poo/view/icon/Eraser.png"/>
@@ -256,7 +251,7 @@
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="btnSair">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/fatec/poo/view/icon/exit.png"/>

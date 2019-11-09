@@ -27,7 +27,7 @@ public class GuiMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
+        menuBarPrincipal = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -66,7 +66,7 @@ public class GuiMenu extends javax.swing.JFrame {
         jMenuItem5.setText("Sair");
         jMenu1.add(jMenuItem5);
 
-        jMenuBar1.add(jMenu1);
+        menuBarPrincipal.add(jMenu1);
 
         jMenu2.setMnemonic('o');
         jMenu2.setText("Operações");
@@ -79,9 +79,9 @@ public class GuiMenu extends javax.swing.JFrame {
         jMenuItem7.setText("Efetuar matrícula");
         jMenu2.add(jMenuItem7);
 
-        jMenuBar1.add(jMenu2);
+        menuBarPrincipal.add(jMenu2);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(menuBarPrincipal);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -136,7 +136,6 @@ public class GuiMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
@@ -145,5 +144,6 @@ public class GuiMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JMenuBar menuBarPrincipal;
     // End of variables declaration//GEN-END:variables
 }
