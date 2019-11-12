@@ -92,10 +92,10 @@
                           <Component id="txtAreaAtuacao" alignment="0" min="-2" pref="171" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="comboBoxEscolaridade" pref="171" max="32767" attributes="0"/>
-                              <Component id="txtDataNascimento" max="32767" attributes="0"/>
+                              <Component id="formattedTxtDataNascimento" max="32767" attributes="0"/>
                               <Component id="txtNumero" max="32767" attributes="0"/>
-                              <Component id="txtCep" max="32767" attributes="0"/>
-                              <Component id="txtTelefoneResidencial" max="32767" attributes="0"/>
+                              <Component id="formattedTxtCep" max="32767" attributes="0"/>
+                              <Component id="formattedTxtTelefoneResidencial" max="32767" attributes="0"/>
                               <Component id="txtCelular" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -119,7 +119,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtNome" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtDataNascimento" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="formattedTxtDataNascimento" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -143,14 +143,14 @@
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtBairro" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtCep" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="formattedTxtCep" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtCidade" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtTelefoneResidencial" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="formattedTxtTelefoneResidencial" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -299,7 +299,7 @@
         <Property name="text" type="java.lang.String" value="Escolaridade"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="txtDataNascimento">
+    <Component class="javax.swing.JFormattedTextField" name="formattedTxtDataNascimento">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
           <Format format="##/##/####" subtype="-1" type="5"/>
@@ -338,7 +338,7 @@
         <Property name="text" type="java.lang.String" value="CEP"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="txtCep">
+    <Component class="javax.swing.JFormattedTextField" name="formattedTxtCep">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
           <Format format="#####-###" subtype="-1" type="5"/>
@@ -351,7 +351,7 @@
         <Property name="text" type="java.lang.String" value="Telefone Residencial"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="txtTelefoneResidencial">
+    <Component class="javax.swing.JFormattedTextField" name="formattedTxtTelefoneResidencial">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
           <Format format="(##) ####-####" subtype="-1" type="5"/>
@@ -414,6 +414,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Sair"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSairActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel16">
       <Properties>

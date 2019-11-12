@@ -16,6 +16,7 @@ public class GuiMenu extends javax.swing.JFrame {
      */
     public GuiMenu() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -28,58 +29,83 @@ public class GuiMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         menuBarPrincipal = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        menuCadastros = new javax.swing.JMenu();
+        menuCurso = new javax.swing.JMenuItem();
+        menuTurma = new javax.swing.JMenuItem();
+        menuInstrutor = new javax.swing.JMenuItem();
+        menuAluno = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
+        menuSair = new javax.swing.JMenuItem();
+        menuOperacoes = new javax.swing.JMenu();
+        menuAlocarInstrutor = new javax.swing.JMenuItem();
+        menuEfetuarMatricula = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Trabalho POO");
 
-        jMenu1.setMnemonic('c');
-        jMenu1.setText("Cadastros");
+        menuCadastros.setMnemonic('c');
+        menuCadastros.setText("Cadastros");
 
-        jMenuItem1.setMnemonic('u');
-        jMenuItem1.setText("Curso");
-        jMenu1.add(jMenuItem1);
+        menuCurso.setMnemonic('u');
+        menuCurso.setText("Curso");
+        menuCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCursoActionPerformed(evt);
+            }
+        });
+        menuCadastros.add(menuCurso);
 
-        jMenuItem2.setMnemonic('t');
-        jMenuItem2.setText("Turma");
-        jMenu1.add(jMenuItem2);
+        menuTurma.setMnemonic('t');
+        menuTurma.setText("Turma");
+        menuTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuTurmaActionPerformed(evt);
+            }
+        });
+        menuCadastros.add(menuTurma);
 
-        jMenuItem3.setMnemonic('i');
-        jMenuItem3.setText("Instrutor");
-        jMenu1.add(jMenuItem3);
+        menuInstrutor.setMnemonic('i');
+        menuInstrutor.setText("Instrutor");
+        menuInstrutor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuInstrutorActionPerformed(evt);
+            }
+        });
+        menuCadastros.add(menuInstrutor);
 
-        jMenuItem4.setMnemonic('a');
-        jMenuItem4.setText("Aluno");
-        jMenu1.add(jMenuItem4);
-        jMenu1.add(jSeparator1);
+        menuAluno.setMnemonic('a');
+        menuAluno.setText("Aluno");
+        menuAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuAlunoActionPerformed(evt);
+            }
+        });
+        menuCadastros.add(menuAluno);
+        menuCadastros.add(jSeparator1);
 
-        jMenuItem5.setMnemonic('s');
-        jMenuItem5.setText("Sair");
-        jMenu1.add(jMenuItem5);
+        menuSair.setMnemonic('s');
+        menuSair.setText("Sair");
+        menuSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSairActionPerformed(evt);
+            }
+        });
+        menuCadastros.add(menuSair);
 
-        menuBarPrincipal.add(jMenu1);
+        menuBarPrincipal.add(menuCadastros);
 
-        jMenu2.setMnemonic('o');
-        jMenu2.setText("Operações");
+        menuOperacoes.setMnemonic('o');
+        menuOperacoes.setText("Operações");
 
-        jMenuItem6.setMnemonic('l');
-        jMenuItem6.setText("Alocar instrutor");
-        jMenu2.add(jMenuItem6);
+        menuAlocarInstrutor.setMnemonic('l');
+        menuAlocarInstrutor.setText("Alocar instrutor");
+        menuOperacoes.add(menuAlocarInstrutor);
 
-        jMenuItem7.setMnemonic('e');
-        jMenuItem7.setText("Efetuar matrícula");
-        jMenu2.add(jMenuItem7);
+        menuEfetuarMatricula.setMnemonic('e');
+        menuEfetuarMatricula.setText("Efetuar matrícula");
+        menuOperacoes.add(menuEfetuarMatricula);
 
-        menuBarPrincipal.add(jMenu2);
+        menuBarPrincipal.add(menuOperacoes);
 
         setJMenuBar(menuBarPrincipal);
 
@@ -96,6 +122,30 @@ public class GuiMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void menuCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCursoActionPerformed
+        GuiCurso guiCurso = new GuiCurso();
+        guiCurso.setVisible(true);
+    }//GEN-LAST:event_menuCursoActionPerformed
+
+    private void menuTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTurmaActionPerformed
+        GuiTurma guiTurma = new GuiTurma();
+        guiTurma.setVisible(true);
+    }//GEN-LAST:event_menuTurmaActionPerformed
+
+    private void menuInstrutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuInstrutorActionPerformed
+        GuiInstrutor guiInstrutor = new GuiInstrutor();
+        guiInstrutor.setVisible(true);
+    }//GEN-LAST:event_menuInstrutorActionPerformed
+
+    private void menuAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAlunoActionPerformed
+        GuiAluno guiAluno = new GuiAluno();
+        guiAluno.setVisible(true);
+    }//GEN-LAST:event_menuAlunoActionPerformed
+
+    private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_menuSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,16 +184,16 @@ public class GuiMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JMenuItem menuAlocarInstrutor;
+    private javax.swing.JMenuItem menuAluno;
     private javax.swing.JMenuBar menuBarPrincipal;
+    private javax.swing.JMenu menuCadastros;
+    private javax.swing.JMenuItem menuCurso;
+    private javax.swing.JMenuItem menuEfetuarMatricula;
+    private javax.swing.JMenuItem menuInstrutor;
+    private javax.swing.JMenu menuOperacoes;
+    private javax.swing.JMenuItem menuSair;
+    private javax.swing.JMenuItem menuTurma;
     // End of variables declaration//GEN-END:variables
 }

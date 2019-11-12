@@ -16,6 +16,7 @@ public class GuiInstrutor extends javax.swing.JFrame {
      */
     public GuiInstrutor() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -47,14 +48,14 @@ public class GuiInstrutor extends javax.swing.JFrame {
         comboBoxEstadoCivil = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        txtDataNascimento = new javax.swing.JFormattedTextField();
+        formattedTxtDataNascimento = new javax.swing.JFormattedTextField();
         comboBoxEscolaridade = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
         txtNumero = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        txtCep = new javax.swing.JFormattedTextField();
+        formattedTxtCep = new javax.swing.JFormattedTextField();
         jLabel14 = new javax.swing.JLabel();
-        txtTelefoneResidencial = new javax.swing.JFormattedTextField();
+        formattedTxtTelefoneResidencial = new javax.swing.JFormattedTextField();
         jLabel15 = new javax.swing.JLabel();
         txtCelular = new javax.swing.JFormattedTextField();
         btnConsultar = new javax.swing.JButton();
@@ -114,11 +115,11 @@ public class GuiInstrutor extends javax.swing.JFrame {
         jLabel11.setText("Escolaridade");
 
         try {
-            txtDataNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            formattedTxtDataNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtDataNascimento.setEnabled(false);
+        formattedTxtDataNascimento.setEnabled(false);
 
         comboBoxEscolaridade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         comboBoxEscolaridade.setEnabled(false);
@@ -130,20 +131,20 @@ public class GuiInstrutor extends javax.swing.JFrame {
         jLabel13.setText("CEP");
 
         try {
-            txtCep.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
+            formattedTxtCep.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtCep.setEnabled(false);
+        formattedTxtCep.setEnabled(false);
 
         jLabel14.setText("Telefone Residencial");
 
         try {
-            txtTelefoneResidencial.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) ####-####")));
+            formattedTxtTelefoneResidencial.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) ####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtTelefoneResidencial.setEnabled(false);
+        formattedTxtTelefoneResidencial.setEnabled(false);
 
         jLabel15.setText("Celular");
 
@@ -171,6 +172,11 @@ public class GuiInstrutor extends javax.swing.JFrame {
 
         btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fatec/poo/view/icon/exit.png"))); // NOI18N
         btnSair.setText("Sair");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairActionPerformed(evt);
+            }
+        });
 
         jLabel16.setText("Formação");
 
@@ -244,10 +250,10 @@ public class GuiInstrutor extends javax.swing.JFrame {
                             .addComponent(txtAreaAtuacao, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(comboBoxEscolaridade, 0, 171, Short.MAX_VALUE)
-                                .addComponent(txtDataNascimento)
+                                .addComponent(formattedTxtDataNascimento)
                                 .addComponent(txtNumero)
-                                .addComponent(txtCep)
-                                .addComponent(txtTelefoneResidencial)
+                                .addComponent(formattedTxtCep)
+                                .addComponent(formattedTxtTelefoneResidencial)
                                 .addComponent(txtCelular)))
                         .addGap(29, 29, 29))))
         );
@@ -269,7 +275,7 @@ public class GuiInstrutor extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2)
                         .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(formattedTxtDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -289,13 +295,13 @@ public class GuiInstrutor extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13)
-                    .addComponent(txtCep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(formattedTxtCep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(txtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14)
-                    .addComponent(txtTelefoneResidencial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(formattedTxtTelefoneResidencial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
@@ -322,12 +328,17 @@ public class GuiInstrutor extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {comboBoxEscolaridade, comboBoxEstadoCivil, comboBoxSexo, formattedTxtCpf, txtAreaAtuacao, txtBairro, txtCelular, txtCep, txtCidade, txtDataNascimento, txtEmail, txtEndereco, txtFormacao, txtNome, txtNumero, txtRg, txtTelefoneResidencial});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {comboBoxEscolaridade, comboBoxEstadoCivil, comboBoxSexo, formattedTxtCep, formattedTxtCpf, formattedTxtDataNascimento, formattedTxtTelefoneResidencial, txtAreaAtuacao, txtBairro, txtCelular, txtCidade, txtEmail, txtEndereco, txtFormacao, txtNome, txtNumero, txtRg});
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAlterar, btnConsultar, btnExcluir, btnInserir, btnSair});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_btnSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -374,7 +385,10 @@ public class GuiInstrutor extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboBoxEscolaridade;
     private javax.swing.JComboBox<String> comboBoxEstadoCivil;
     private javax.swing.JComboBox<String> comboBoxSexo;
+    private javax.swing.JFormattedTextField formattedTxtCep;
     private javax.swing.JFormattedTextField formattedTxtCpf;
+    private javax.swing.JFormattedTextField formattedTxtDataNascimento;
+    private javax.swing.JFormattedTextField formattedTxtTelefoneResidencial;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -395,15 +409,12 @@ public class GuiInstrutor extends javax.swing.JFrame {
     private javax.swing.JTextField txtAreaAtuacao;
     private javax.swing.JTextField txtBairro;
     private javax.swing.JFormattedTextField txtCelular;
-    private javax.swing.JFormattedTextField txtCep;
     private javax.swing.JTextField txtCidade;
-    private javax.swing.JFormattedTextField txtDataNascimento;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtEndereco;
     private javax.swing.JTextField txtFormacao;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtNumero;
     private javax.swing.JFormattedTextField txtRg;
-    private javax.swing.JFormattedTextField txtTelefoneResidencial;
     // End of variables declaration//GEN-END:variables
 }
