@@ -5,6 +5,9 @@
  */
 package fatec.poo.view;
 
+import fatec.poo.control.Conexao;
+import fatec.poo.control.DaoCurso;
+
 /**
  *
  * @author zaps
@@ -49,6 +52,11 @@ public class GuiCurso extends javax.swing.JFrame {
         formattedTxtDataVigencia = new javax.swing.JFormattedTextField();
 
         setTitle("Cadastrar curso");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jLabel1.setText("Sigla curso");
 
@@ -219,6 +227,14 @@ public class GuiCurso extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnSairActionPerformed
 
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        conexao = new Conexao("BD1813031","BD1813031");
+        conexao.setDriver("oracle.jdbc.driver.OracleDriver");
+        conexao.setConnectionString("jdbc:oracle:thin:@apolo:1521:xe");
+        daoCurso = new DaoCurso(conexao.conectar());
+    }//GEN-LAST:event_formWindowOpened
+
     /**
      * @param args the command line arguments
      */
@@ -275,4 +291,6 @@ public class GuiCurso extends javax.swing.JFrame {
     private javax.swing.JTextField txtValorCurso;
     private javax.swing.JTextField txtValorHoraInstrutor;
     // End of variables declaration//GEN-END:variables
+    private Conexao conexao=null;
+    private DaoCurso daoCurso =null;
 }
